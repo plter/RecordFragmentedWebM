@@ -1,0 +1,11 @@
+<div>
+    <div>
+        <video width="400" height="300" autoplay ref="preview" muted></video>
+        <video width="400" height="300" autoplay ref="replay" @timeupdate="replayTimeupdateHandler"></video>
+    </div>
+    <div>
+        <button class="btn btn-danger" :disabled="recording||!recordEnded" @click="startRecordBtnClicked">Record
+        </button>
+        <button class="btn btn-danger" :disabled="!recording" @click="stopRecordBtnClicked">Stop</button>
+    </div>
+</div>
